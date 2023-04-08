@@ -1,0 +1,45 @@
+import time
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+options = webdriver.ChromeOptions()
+options.add_experimental_option("detach", True)
+# execute the path where you stored your chromedriver
+driver = webdriver.Chrome(options=options,
+                          executable_path='C:/Users/Lyudmil/PycharmProjects/pythonProject/ChromeDriver/chromedriver')
+
+# Opens URL an maximize window
+driver.get("https://www.guru99.com/")
+driver.maximize_window()
+time.sleep(3)
+# Finds element by xpath
+openPython = driver.find_element(By.XPATH, '//a[text() ="➤ Python"]')
+# clicks on "Contact Us"
+openPython.click()
+time.sleep(3)
+driver.back()
+time.sleep(3)
+openJava = driver.find_element(By.XPATH, '//a[text() ="➤ Java"]')
+# clicks on "Contact Us"
+openJava.click()
+time.sleep(3)
+driver.back()
+time.sleep(3)
+openVbscript = driver.find_element(By.XPATH, '//a[text() ="➤ VBScript"]')
+# clicks on "Contact Us"
+openVbscript.click()
+time.sleep(3)
+driver.back()
+time.sleep(3)
+openPerl = driver.find_element(By.XPATH, '//a[text() ="➤ Perl"]')
+# clicks on "Contact Us"
+openPerl.click()
+time.sleep(3)
+driver.back()
+time.sleep(3)
+openLinux = driver.find_element(By.XPATH, '//a[text() ="➤ Linux"]')
+# clicks on "Contact Us"
+openLinux.click()
+time.sleep(3)
+driver.back()
